@@ -1,0 +1,70 @@
+Title: Studio
+
+----
+
+Email: studio@borismeister.ch
+
+----
+
+Phone: +41 78 871 38 82
+
+----
+
+Street: 
+
+----
+
+Postcode: 
+
+----
+
+City: 
+
+----
+
+Country: 
+
+----
+
+About: Boris Meister blablabla Em qui dolupta ne nat voluptatur moluptus, coneserunt. Ovit, nem sed ex ent quam fugit, aspid quuntis saperi conseque cust aspero que apictur? Link Link 2. Derchil mo volenes seribus.
+
+----
+
+Addresses: 
+
+- 
+  street: Place des Volontaires 4
+  zip: "1204"
+  city: Genève
+  country: Suisse
+  countrycode: CH
+  phone: +41 (0)78 871 38 82
+- 
+  street: 36 Bedford Square
+  zip: WC1B 3ES
+  city: London
+  country: United Kingdom
+  countrycode: UK
+  phone: +44 (0)77 83 198 126
+
+----
+
+Clients: 
+
+- 
+  clientname: Client 1
+- 
+  clientname: Client 2
+- 
+  clientname: Client 3
+
+----
+
+Awards: 
+
+- 
+  year: "2015"
+  entry: Best dressed in the Berghain darkroom
+- 
+  year: "2013"
+  entry: Coolest kid in Minnesota
