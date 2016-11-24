@@ -13,6 +13,7 @@ require("../less/main.less");
 	}
 
 	var fixnav = function(){
+		// $(window).scroll(function(){
      		console.log($(window).scrollTop());
      		var height = $(window).height() - $('.navigation_wrapper').outerHeight();
      		var scrollTop     = $(window).scrollTop();
@@ -26,12 +27,18 @@ require("../less/main.less");
     		else if (scrollTop <= height) {
       			$('.navigation_wrapper').removeClass('fixed');
     		}
+    	// });
 	}
 
 	//document ready
 	$(document).ready(function(){
 		scrollit();
 		fixnav();
+
+		//on scroll
+		$(window).scroll(function(){
+			fixnav();
+		});
 	});
 
 
@@ -41,11 +48,6 @@ require("../less/main.less");
 		
 	});
 
-
-	//on load
-	$(window).scroll(function(){
-		fixnav();
-	});
 
 	//keypresses
 	$(document).keydown(function(e) {

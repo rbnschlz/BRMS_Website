@@ -1,0 +1,74 @@
+title: Studio
+pages: false
+fields:
+  title:
+    label: Title
+    type:  text
+    readonly: true
+  about:
+    label: About
+    type: textarea
+  email:
+    label: e-Mail
+    type: email
+  addresses:
+    label: Addresses
+    type: structure
+    entry: >
+      {{street}}<br />
+      {{zip}} {{city}}, {{country}}, {{countrycode}}<br />
+      {{phone}}
+    fields:
+      street:
+        label: Street
+        type: text
+      zip:
+        label: Postcode
+        type: text
+        width: 1/2
+      city:
+        label: City
+        type: text
+        width: 1/2
+      country:
+        label: Country
+        type: text
+        width: 1/2
+      countrycode:
+        label: Country Code
+        type: text
+        width: 1/2
+      phone:
+        label: Phone
+        type: tel
+  clients:
+    label: clients
+    type: structure
+    entry: >
+      {{clientname}}
+    fields:
+      clientname:
+        label: Client
+        type: text
+  awards:
+    label: Awards and Exhibitions
+    type: structure
+    entry: >
+      {{year}}, {{entry}}
+    fields:
+      year:
+        label: Year
+        type: number
+      entry:
+        label: Entry
+        type: text 
+
+
+
+
+options: 
+  preview: true
+  status: true
+  template: false
+  url: false
+  delete: false

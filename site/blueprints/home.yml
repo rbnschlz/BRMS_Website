@@ -1,0 +1,19 @@
+title: Home
+pages: false
+files:
+  type: image
+  fields: 
+    caption:
+      label: Image Credit
+      type: text
+fields:
+  title:
+    label: Title
+    type:  text
+    readonly: true
+options: 
+  preview: true
+  status: true
+  template: false
+  url: false
+  delete: false
