@@ -30,12 +30,15 @@
 	<div class="overlay_slide">
 		<?php foreach($page->images()->sortBy('sort', 'asc')->offset(1) as $image): ?>
 			<div class="overlay_slide_s">
-				<div class="overlay_slide_s_img"data-style="background-image: url('<?php echo $image->resize(2000, 1500, 80)->url() ?>')"></div>
+				<div class="overlay_slide_s_img" style="background-image: url('<?php echo $image->resize(2000, 1500, 80)->url() ?>')"></div>
 			</div>
 		<?php endforeach ?>
 	</div>
 	<span class="project_overlay_close">&#215;</span>
 	<span class="project_overlay_title"><?php echo $page->title() ?></span>
+	<span class="project_overlay_title"><?php echo $page->title() ?></span>
+	<div class="project_overlay_count" id="caption"></div>
+
 </div>
 
 

@@ -393,6 +393,7 @@ h2 {
   opacity: 0;
   cursor: pointer;
   background: @c1;
+  overflow: hidden !important;
   // .transback;
   // .trans;
   &.active {
@@ -405,23 +406,39 @@ h2 {
 
 .overlay_slide {
   position: fixed;
-  width: 100vw;
+  width: 70vw;
+  margin: 0 15vw;
   height: 100vh;
   top: 0;
   left: 0;
+  overflow: visible !important;
   &_s {
-    width: calc(~"100vw - 40px");
-    height: calc(~"100vh - 220px");
+    // width: calc(~"60vw");
+    // height: calc(~"100vh - 220px");
+    // width: 50vw;
+    // margin: 0 25vw;
+    height: 100vh;
+    padding: 10vh 0;
+    transition: padding 0.2s;
     position: absolute;
     top: 0;
     left: 0;
-    margin: 20px 20px 200px 20px;
+    // padding: 20px 10vw 200px 10vw;
     &_img {
-      width: 100%;
+      width: 80%;
+      margin: 0 10%;
       height: 100%;
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
+      transition: background-position 0.2s;
+    }
+  }
+  .cycle-slide-active {
+    padding: @mp-m 0 @mp-m*4 0;
+    .overlay_slide_s_img {
+      background-position: center top;
+
     }
   }
 }
@@ -439,6 +456,15 @@ h2 {
   position: fixed;
   left: 0;
   bottom: 0;
+  margin: @mp-s;
+  .fs-xl;
+  .lh-xl;
+}
+
+.project_overlay_count {
+  position: fixed;
+  right: 0;
+  top: 0;
   margin: @mp-s;
   .fs-xl;
   .lh-xl;
