@@ -9,9 +9,8 @@
 			$block .= $n%2 == 1 ? " odd" : " even";
 			$block .= "'>";
 			$block .= "<a href='".$project->url()."' class='";
-			$block .= $project->images()->first()->orientation() == "landscape" ? "landscape" : "portrait";
-			$block .= $project->sizing() == "small" ? " small" : "";
-			$block .= "'><img src='".$project->images()->first()->url()."'></img>";
+			$block .= $project->images()->sortBy('sort', 'asc')->first()->orientation() == "landscape" ? "landscape" : "portrait";
+			$block .= "'><img src='".$project->images()->sortBy('sort', 'asc')->first()->url()."'></img>";
 			$block .= "<span>{$project->title()}</span>";
 			$block .= "</a>";
 			$block .= "</div>";

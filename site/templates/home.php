@@ -1,5 +1,5 @@
 <?php snippet('header') ?>
-<div class="navigation_wrapper">
+<div class="navigation_wrapper <?php if($page->typecolor() == "black") { echo "blacktype"; } ?>">
 	<a class="navigation_top" href="#top"><?php echo $site->title() ?></a>
 	<a class="navigation_projects" href="#projects">Projects</a>
 	<a class="navigation_info" href="#info">Info</a>

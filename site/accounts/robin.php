@@ -7,8 +7,8 @@ email: rs@robinscholz.com
 language: en
 role: admin
 history:
+  - home
   - projects/test-project-1
   - projects/test-project-3
   - projects/test-project-6
   - projects/test-project-5
-  - projects/test-project-4

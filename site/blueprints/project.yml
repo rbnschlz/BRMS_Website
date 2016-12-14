@@ -6,6 +6,13 @@ files:
     caption:
       label: Caption
       type: text
+    sizing:
+      label: Size
+      type: radio
+      default: big
+      options:
+        big: Big
+        small: Small
 fields:
   title:
     label: Title

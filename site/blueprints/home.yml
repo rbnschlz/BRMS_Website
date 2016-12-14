@@ -11,6 +11,13 @@ fields:
     label: Title
     type:  text
     readonly: true
+  typecolor:
+    label: Type Color
+    type: radio
+    default: black
+    options:
+      black: Black
+      white: White
 options: 
   preview: true
   status: true
