@@ -43,7 +43,7 @@ Addresses:
   street: 36 Bedford Square
   zip: WC1B 3ES
   city: London
-  country: United Kingdom
+  country: UK
   countrycode: UK
   phone: +44 (0)77 83 198 126
 

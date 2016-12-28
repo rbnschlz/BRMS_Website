@@ -14,26 +14,8 @@
 
 <!-- Info -->
 <section class="home_section home_section_info" id="info">
-	<div class="home_info_left">
+	<div class="home_info_top">
 		<div class="home_info_text"><?php echo $infotext ?></div>
-		<div class="home_info_bottoms">
-			<div class="home_info_email">
-				<h2>EMAIL</h2>
-				<span><?php echo $email ?></span>
-			</div>
-			<div class="home_info_adresses">
-				<?php foreach(page("studio")->addresses()->toStructure() as $adress): ?>
-					<div class="home_info_adresses_block">
-						<h2><?php echo $adress->countrycode(); ?></h2>
-						<span><?php echo $adress->street(); ?>,</span>
-						<span><?php echo $adress->zip(); echo " "; echo $adress->city(); echo " — "; echo $adress->country(); ?></span>
-						<span><?php echo $adress->phone(); ?></span>
-					</div>
-				<?php endforeach ?>
-			</div>
-		</div>
-	</div>
-	<div class="home_info_right">
 		<div class="home_info_clients">
 			<h2>CLIENTS</h2>
 			<?php 
@@ -60,6 +42,24 @@
 
 				echo $block;
 			} ?>
+		</div>
+	</div>
+	<div class="home_info_bottom">
+		<div class="home_info_bottoms">
+			<div class="home_info_email">
+				<h2>EMAIL</h2>
+				<span><?php echo $email ?></span>
+			</div>
+			<div class="home_info_adresses">
+				<?php foreach(page("studio")->addresses()->toStructure() as $adress): ?>
+					<div class="home_info_adresses_block">
+						<h2><?php echo $adress->countrycode(); ?></h2>
+						<span><?php echo $adress->street(); ?>,</span>
+						<span><?php echo $adress->zip(); echo " "; echo $adress->city(); echo " — "; echo $adress->country(); ?></span>
+						<span><?php echo $adress->phone(); ?></span>
+					</div>
+				<?php endforeach ?>
+			</div>
 		</div>
 		<ol class="home_info_credit">
 			<li><span class="tinyheadline">Cover picture: </span> <?php echo $page->images()->first()->caption() ?></li>
