@@ -1,7 +1,7 @@
 <?php snippet('header') ?>
 <div class="project_navigation_wrapper">
 	<a class="navigation_top" href="<?php echo $site->url() ?>"><?php echo $site->title() ?></a>
-	<a class="navigation_projects" href="<?php echo $site->url() ?>#projects">Projects</a>
+	<a class="navigation_projects" href="#projects">Projects</a>
 	<a class="navigation_info" href="<?php echo $site->url() ?>#info">Info</a>
 </div>
 
@@ -15,9 +15,11 @@
 		$block = "<div class='project_image_block";
 		$block .= $image->sizing() == "small" ? " small" : " big";
 		$block .= "'>";
-		$block .= "<img src='".$image->url()."' class='zoomable ";
+		$block .= "<img src='".$image->resize(2000, 1500, 80)->url()."' class='zoomable ";
 		$block .= $image->orientation() == "landscape" ? "project_landscape" : "project_portrait";
 		$block .= "'></img>";
+		// $block .= $image->caption()->isNotEmpty() ? $image->caption()->kirbytext() : "";
+		$block .= $image->insert()->isNotEmpty() ? $image->insert()->kirbytext() : "";
 		$block .= "</div>";
 
 		echo $block;
@@ -30,7 +32,7 @@
 	<div class="overlay_slide">
 		<?php foreach($page->images()->sortBy('sort', 'asc')->offset(1) as $image): ?>
 			<div class="overlay_slide_s">
-				<div class="overlay_slide_s_img" style="background-image: url('<?php echo $image->resize(2000, 1500, 80)->url() ?>')"></div>
+				<div class="overlay_slide_s_img" data-style="background-image: url('<?php echo $image->resize(2000, 1500, 80)->url() ?>')"></div>
 			</div>
 		<?php endforeach ?>
 	</div>

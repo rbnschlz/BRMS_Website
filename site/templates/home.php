@@ -8,7 +8,7 @@
 
 <!-- Image -->
 <section class="home_section home_section_landing" id="top">
-	<div class="home_image" style="background-image: url(<?php echo $page->images()->first()->url() ?>)"></div>
+	<div class="home_image" style="background-image: url(<?php echo $page->images()->first()->resize(2000, 1500, 80)->url() ?>)"></div>
 </section>
 
 
@@ -16,19 +16,21 @@
 <section class="home_section home_section_info" id="info">
 	<div class="home_info_left">
 		<div class="home_info_text"><?php echo $infotext ?></div>
-		<div class="home_info_email">
-			<h2>EMAIL</h2>
-			<span><?php echo $email ?><span>
-		</div>
-		<div class="home_info_adresses">
-			<?php foreach(page("studio")->addresses()->toStructure() as $adress): ?>
-				<div class="home_info_adresses_block">
-					<h2><?php echo $adress->countrycode(); ?></h2>
-					<span><?php echo $adress->street(); ?>,</span>
-					<span><?php echo $adress->zip(); echo " "; echo $adress->city(); echo " — "; echo $adress->country(); ?></span>
-					<span><?php echo $adress->phone(); ?></span>
-				</div>
-			<?php endforeach ?>
+		<div class="home_info_bottoms">
+			<div class="home_info_email">
+				<h2>EMAIL</h2>
+				<span><?php echo $email ?></span>
+			</div>
+			<div class="home_info_adresses">
+				<?php foreach(page("studio")->addresses()->toStructure() as $adress): ?>
+					<div class="home_info_adresses_block">
+						<h2><?php echo $adress->countrycode(); ?></h2>
+						<span><?php echo $adress->street(); ?>,</span>
+						<span><?php echo $adress->zip(); echo " "; echo $adress->city(); echo " — "; echo $adress->country(); ?></span>
+						<span><?php echo $adress->phone(); ?></span>
+					</div>
+				<?php endforeach ?>
+			</div>
 		</div>
 	</div>
 	<div class="home_info_right">
@@ -60,8 +62,8 @@
 			} ?>
 		</div>
 		<ol class="home_info_credit">
-			<li><span class="tinyheadline">Cover picture</span> <?php echo $page->images()->first()->caption() ?></li>
-			<li><span class="tinyheadline">Typeface</span> Basel Grotesk by Chi Long Trieu</li>
+			<li><span class="tinyheadline">Cover picture: </span> <?php echo $page->images()->first()->caption() ?></li>
+			<li><span class="tinyheadline">Typeface: </span> Basel Grotesk by Chi Long Trieu</li>
 		</ol>
 	</div>
 </section>

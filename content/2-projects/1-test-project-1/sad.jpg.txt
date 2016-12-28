@@ -2,12 +2,12 @@ Caption:
 
 ----
 
-Sort: 4
-
-----
-
 Insert: 
 
 ----
 
 Sizing: big
+
+----
+
+Sort: 3

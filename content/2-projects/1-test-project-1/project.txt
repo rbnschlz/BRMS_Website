@@ -5,8 +5,3 @@ Title: Test Project 1
 Sizing: big
 
 ----
-
-Description: 
-
-Communication for Christian Marclay’s The Clock at the Walker Art Center.
-Read about the process (link: http://blogs.walkerart.org/design/2014/07/18/designing-for-christian-marclays-the-clock/ text: here popup: yes).

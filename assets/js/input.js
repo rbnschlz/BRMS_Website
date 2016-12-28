@@ -41,9 +41,8 @@ function(a){"use strict";a.extend(a.fn.cycle.defaults,{tmplRegex:"{{((.)?.*?)}}"
 	});
 
 	var scrollit = function(){
-		$(document).on('click', '.navigation_wrapper a', function(event){
-    		event.preventDefault();
-
+		$(document).on('click', '.navigation_wrapper a, .navigation_projects', function(event){
+    		// event.preventDefault();
    			$('html, body').animate({
         		scrollTop: $( $.attr(this, 'href') ).offset().top
     		}, 500);
@@ -51,21 +50,18 @@ function(a){"use strict";a.extend(a.fn.cycle.defaults,{tmplRegex:"{{((.)?.*?)}}"
 	}
 
 	var fixnav = function(){
-		// $(window).scroll(function(){
-     		console.log($(window).scrollTop());
+     		// console.log($(window).scrollTop());
      		var height = $(window).height() - $('.navigation_wrapper').outerHeight();
      		var scrollTop     = $(window).scrollTop();
         	var elementOffset = $('.navigation_wrapper').offset();
         	var distance      = (elementOffset - scrollTop);
 
-     		console.log($('.navigation_wrapper').height());
     		if (scrollTop >= height) {
       			$('.navigation_wrapper').addClass('fixed');
    			 }
     		else if (scrollTop <= height) {
       			$('.navigation_wrapper').removeClass('fixed');
     		}
-    	// });
 	}
 
 		//Slideshow
@@ -96,15 +92,15 @@ function(a){"use strict";a.extend(a.fn.cycle.defaults,{tmplRegex:"{{((.)?.*?)}}"
             var next = $(".cycle-slide-active").next().children().first(); //Find next slide
                 next.attr( 'style', next.attr('data-style') ); //Load background image
                 next.removeAttr( 'data-style' ); //Clean up code
-            // var nextnext = $(".cycle-slide-active").next().next().children().first(); //Find next slide
-            //     nextnext.attr( 'style', next.attr('data-style') ); //Load background image
-            //     nextnext.removeAttr( 'data-style' ); //Clean up code
+            var nextnext = $(".cycle-slide-active").next().next().children().first(); //Find next slide
+                nextnext.attr( 'style', nextnext.attr('data-style') ); //Load background image
+                nextnext.removeAttr( 'data-style' ); //Clean up code
             var prev = $(".cycle-slide-active").prev().children().first(); //Find prev slide
                 prev.attr( 'style', prev.attr('data-style') ); //Load background image
                 prev.removeAttr( 'data-style' ); //Clean up code
-            // var prevprev = $(".cycle-slide-active").prev().prev().children().first(); //Find prev slide
-            //     prevprev.attr( 'style', prev.attr('data-style') ); //Load background image
-            //     prevprev.removeAttr( 'data-style' ); //Clean up code
+            var prevprev = $(".cycle-slide-active").prev().prev().children().first(); //Find prev slide
+                prevprev.attr( 'style', prevprev.attr('data-style') ); //Load background image
+                prevprev.removeAttr( 'data-style' ); //Clean up code
 		});
 
 		$(document).on('click', '.project_overlay_close', function(event) {
@@ -127,7 +123,7 @@ function(a){"use strict";a.extend(a.fn.cycle.defaults,{tmplRegex:"{{((.)?.*?)}}"
 		fixnav();
 		slideit();
 		//on scroll
-		$(window).scroll(function(){
+		$(window).on('scroll', function() {
 			fixnav();
 		});
 			//keypresses
@@ -151,19 +147,9 @@ function(a){"use strict";a.extend(a.fn.cycle.defaults,{tmplRegex:"{{((.)?.*?)}}"
 
 
 	//on load
-	$(window).load(function(){
+	$(window).on('load', function() {
 	});
 
 
-	// //keypresses
-	// $(document.documentElement).keyup(function (event) {
- //        if (event.keyCode == 37) {
- //            // $('.overlay_slide').cycle('prev');
- //            console.log("left");
- //        } else if (event.keyCode == 39) {
- //            // $('.overlay_slide').cycle('next');
- //            console.log("right");
- //    	}
-	// });
 
 })(jQuery);

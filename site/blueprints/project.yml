@@ -3,9 +3,9 @@ pages: false
 files: 
   sortable: true
   fields:
-    caption:
-      label: Caption
-      type: text
+    insert:
+      label: Text Description
+      type: textarea
     sizing:
       label: Size
       type: radio
@@ -23,9 +23,6 @@ fields:
     options:
       big: Big
       small: Small
-  description:
-    label: Description
-    type: textarea
 
       
 
