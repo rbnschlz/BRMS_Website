@@ -447,6 +447,24 @@ h2 {
   }
 }
 
+.project_overlay_left {
+  position: fixed;
+  width: 50vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.project_overlay_right {
+  position: fixed;
+  width: 50vw;
+  height: 100vh;
+  top: 0;
+  left: 50vw;
+  z-index: 99;
+}
+
 .overlay_slide {
   position: fixed;
   width: 70vw;
@@ -493,6 +511,7 @@ h2 {
   margin: 0 @mp-s;
   .fs-xl;
   .lh-xl;
+  z-index: 101;
 }
 
 .project_overlay_title {
@@ -532,6 +551,10 @@ h2 {
   }
 }
 
+.opacityzero {
+  opacity: 0;
+}
+
 /* Animations
 -------------------------------------------------- */
 
@@ -542,8 +565,120 @@ h2 {
 /* Media Queries
 -------------------------------------------------- */
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 768px) {
+
+  html, h2 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .home_info_text, .project_title {
+    font-size: 21px;
+    line-height: 24px;
+  }
+
+  .home_info_credit {
+    font-size: 11px;
+    line-height: 14px;
+  }
+
+  .navigation_wrapper {
+    position: fixed;
+    bottom: auto;
+    top: 0;
+  }
+
+  .home_info_text {
+    width: 100%;
+  }
+
+  .home_info_clients, .home_info_awards {
+    width: 100%;
+    padding: @mp-s 0 0 0;
+  }
+
+  .home_info_bottom {
+    margin-top: @mp-s/2;
+  }
+
+  .home_info_bottoms {
+    width: 100%;
+  }
+
+  .home_info_credit {
+    width: 100%;
+    padding: 0;
+  }
+
+  .home_info_adresses_block {
+    width: auto;
+  }
+
+  .home_info_adresses_block:nth-child(1) {
+    padding-right: @mp-s;
+    padding-bottom: @mp-s;
+  }
+
+  .home_info_adresses_block:nth-child(2) {
+    padding: 0 0 @mp-s 0;
+  }
+
+  .home_projects_block {
+    width: 100vw;
+    height: auto;
+  }
+
+  .odd, .even {
+    padding: 0 @mp-s/2;
+  }
  
+  .odd .portrait, .even .portrait {
+    float: initial;
+  }
+
+  .portrait {
+    width: 100%;
+  }
+
+  // .portrait img,  .portrait span {
+  //   width: 70%;
+  //   margin: 0 15%;
+  // }
+
+  .projects_small {
+    width: 100%;
+  }
+
+  .home_projects_block_inner span {
+    visibility: visible;
+  }
+
+  .project_title {
+    margin-top: 41px;
+    padding-left: @mp-s;
+  }
+
+  .project_section_images {
+    width: 100%;
+    margin: 0;
+    padding-bottom: @mp-l - @mp-s;
+  }
+
+  .project_image_block {
+    width: 100%;
+    margin: 0; 
+    // padding-top: 0;
+    padding: 0 @mp-s @mp-s @mp-s;
+  }
+
+  .project_image_block .project_portrait {
+    width: 100%;
+    margin: 0;
+  }
+
+  .small {
+    width: inherit;
+  }
 }
 
 @media only screen and (max-width: 700px) {

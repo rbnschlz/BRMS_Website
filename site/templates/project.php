@@ -1,5 +1,5 @@
 <?php snippet('header') ?>
-<div class="project_navigation_wrapper">
+<div class="project_navigation_wrapper hideaway">
 	<a class="navigation_top" href="<?php echo $site->url() ?>"><?php echo $site->title() ?></a>
 	<a class="navigation_projects" href="#projects">Projects</a>
 	<a class="navigation_info" href="<?php echo $site->url() ?>#info">Info</a>
@@ -36,6 +36,8 @@
 			</div>
 		<?php endforeach ?>
 	</div>
+	<div class="project_overlay_left"></div>
+	<div class="project_overlay_right"></div>
 	<span class="project_overlay_close">&#215;</span>
 	<span class="project_overlay_title"><?php echo $page->title() ?></span>
 	<span class="project_overlay_title"><?php echo $page->title() ?></span>

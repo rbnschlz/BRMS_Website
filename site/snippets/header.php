@@ -1,11 +1,12 @@
 <!DOCTYPE HTML>
 <?php
-// $url = $site->find("archive")->children()->visible()->filter(function($child) {
-//   return $child->hasImages();
-// });
-// $url = $url->shuffle()->first();
-// $images = $url->images()->shuffle();
-// $img = $images->first()->url();
+$url = $site->find("projects")->children()->visible()->filter(function($child) {
+  return $child->hasImages();
+});
+$url = $url->shuffle()->first();
+$images = $url->images()->shuffle();
+$img = $images->first()->url();
+
 ?>
 <html lang="en">
 <head>
@@ -18,8 +19,8 @@
   <meta name="robots" content="index, follow" />
   <meta property="og:url" content="<?php echo html($site->url()) ?>/" />
   <meta property="og:description" content="<?php echo html($site->description()) ?>" />
-  <meta property="og:image" content="<?php //echo $img; ?>"" />
-  <link rel="image_src" href="<?php //echo $img; ?>" />
+  <meta property="og:image" content="<?php echo $img; ?>"" />
+  <link rel="image_src" href="<?php echo $img; ?>" />
 
   <?php 
     echo css('assets/css/main.css');
