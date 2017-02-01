@@ -14,11 +14,9 @@
 
 @import "fonts.less";
 
-// @c1: #fff;
 @c2: rgba(10, 10, 10, 100);
 @c3: rgba(240,239,243,100);
 @c4: rgba(106, 85, 78, 100);
-// @c4: red;
 
 @mp-s: 20px;
 @mp-m: 40px;
@@ -79,10 +77,6 @@ em {
 }
 
 .text {
-  -webkit-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
-  user-select: text; 
   font-family: @fontStack;
   .fs-m;
   .lh-m;
@@ -111,6 +105,24 @@ html {
   .text;
 }
 
+::selection {
+  background: #000;
+  color: @c3;
+}
+
+::-moz-selection {
+  background: #000;
+  color: @c3;
+}
+
+::selection a {
+    color: @c4;
+}
+
+::-moz-selection a {
+    color: @c4;
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -131,6 +143,7 @@ p {
 img {
   width: 100%;
   display: block;
+  user-select: none;
 }
 
 li {
@@ -193,7 +206,6 @@ h2 {
   margin: 0;
   // min-height: 70vh;
   width: 100vw;
-  // background: red;
 }
 
 .home_section_info {
@@ -551,8 +563,16 @@ h2 {
   }
 }
 
+.hideaway {
+  transition: opacity 0.5s;
+  opacity: 1;
+  -webkit-transform: translateZ(0px);
+}
+
 .opacityzero {
   opacity: 0;
+  // visibility: hidden;
+  transition: opacity 0.5s;
 }
 
 /* Animations
@@ -651,6 +671,8 @@ h2 {
 
   .home_projects_block_inner span {
     visibility: visible;
+    margin-top: 10px;
+    display: block;
   }
 
   .project_title {
