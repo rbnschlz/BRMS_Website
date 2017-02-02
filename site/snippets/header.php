@@ -26,13 +26,13 @@ $img = $images->first()->url();
     echo css('assets/css/main.css');
    ?>
 
-  <link rel="apple-touch-icon" sizes="180x180" href="">
-  <link rel="icon" type="image/png" href="" sizes="32x32">
-  <link rel="icon" type="image/png" href="" sizes="16x16">
-  <link rel="manifest" href="">
-  <link rel="mask-icon" href="" color="#144314">
-  <link rel="shortcut icon" href="">
-  <meta name="msapplication-config" content="">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="assets/img/manifest.json">
+  <link rel="mask-icon" href="assets/img/safari-pinned-tab.svg" color="#000000">
+  <link rel="shortcut icon" href="assets/img/favicon.ico">
+  <meta name="msapplication-config" content="assets/img/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
 
 
