@@ -18,9 +18,7 @@ module.exports = {
         loaders: [
             { test: /\.less$/, loader: ExtractScreenCSS.extract({
                 fallbackLoader: "style-loader",
-                // loader: "css-loader?minimize-loader!postcss-loader!less-loader"
-                // loader: "less-loader!postcss-loader!css-loader"
-                // loader: "css-loader!postcss-loader!less-loader"
+
                 loader: ["css-loader?minimize", "postcss-loader", "less-loader"]
             }) }
         ]
@@ -34,14 +32,14 @@ module.exports = {
 
 		new webpack.optimize.LimitChunkCountPlugin({maxChunks: 0}),
 
-		// new webpack.optimize.UglifyJsPlugin({
-		// 	compress: {
-		// 		warnings: false
-		// 	},
-		// 	output: {
-		// 	    comments: false
-		// 	},
-		// }),
+		new webpack.optimize.UglifyJsPlugin({
+			compress: {
+				warnings: false
+			},
+			output: {
+			    comments: false
+			},
+		}),
 
 		ExtractScreenCSS
 	],
