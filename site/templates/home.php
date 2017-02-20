@@ -48,7 +48,7 @@
 		<div class="home_info_bottoms">
 			<div class="home_info_email">
 				<h2>EMAIL</h2>
-				<span><?php echo $email ?></span>
+				<span><a href="mailto:<?php echo $email ?>"><?php echo $email ?></a></span>
 			</div>
 			<div class="home_info_adresses">
 				<?php foreach(page("studio")->addresses()->toStructure() as $adress): ?>
