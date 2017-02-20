@@ -1,7 +1,0 @@
-Title: Test Project 1
-
-----
-
-Sizing: big
-
-----

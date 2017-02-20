@@ -26,7 +26,7 @@ Country:
 
 ----
 
-About: Boris Meister blablabla Em qui dolupta ne nat voluptatur moluptus, coneserunt. Ovit, nem sed ex ent quam fugit, aspid quuntis saperi conseque cust aspero que apictur? Link Link 2. Derchil mo volenes seribus.
+About: Boris Meister is a Swiss born and educated graphic designer working in Geneva and London. He’s engaged in visual communication projects for clients principally in the fields of art, architecture and culture. Recent and on-going collaborations include the Walker Arts Center (Minneapolis), HEAD / Haute école d’art et de design (Geneva) and the Architectural Association (London). Former member of (link: http://www.marbriers4.ch target: _blank text: Marbriers 4).
 
 ----
 
@@ -52,11 +52,7 @@ Addresses:
 Clients: 
 
 - 
-  clientname: Client 1
-- 
-  clientname: Client 2
-- 
-  clientname: Client 3
+  clientname: 'Architectural Association (London), Walker Arts Center (Minneapolis), Centre d’art contemporain Genève, HEAD / Haute école d’art et de design (Genève), FMAC /Fonds municipal d’art contemporain (Genève), The Bartlett School of Architecture (London), BIG Biennale des espaces d’art indépendants Genève, Chancellerie d’Etat (Genève),  MSF / Médecins sans frontières Suisse, nai010 Publishers (Rotterdam), Motel Campo (Genève), Cheptel Records (Genève), Everybody’s Perfect / Geneva International Queer Film Festival, Chronos Verlag'
 
 ----
 

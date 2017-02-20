@@ -6,7 +6,7 @@ Author: Robin Scholz
 
 ----
 
-Description: 
+Description: Boris Meister is a Swiss born and educated graphic designer working in Geneva and London. He’s engaged in visual communication projects for clients principally in the fields of art, architecture and culture.
 
 ----
 
@@ -14,4 +14,4 @@ Keywords:
 
 ----
 
-Copyright: 
+Copyright: 2017

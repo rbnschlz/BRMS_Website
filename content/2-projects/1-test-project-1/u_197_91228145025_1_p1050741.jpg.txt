@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Sort: 10
-
-----
-
-Sizing: small
