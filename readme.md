@@ -1,1 +1,3 @@
-Portfolio Website for Boris Meister
+# 🇨🇭 Website for Boris Meister
+
+Built with [Kirby](https://getkirby.com/)
